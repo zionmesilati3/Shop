@@ -16,12 +16,14 @@ function App() {
     alert("hello from ItemsInCart:"+data);
   }
   */
-
+  function addToCart(item,index){
+    return (<Item id={item.id} name={item.name} image={item.image} price={item.price} key={index} />)
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <Items idata={Wears} />
+        <Items idata={Wears} addToCart={addToCart} />
       </header>
     </div>
   );

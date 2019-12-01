@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Item from './Item'
 
 export default class Items extends Component{
     constructor(props){
@@ -11,13 +10,10 @@ export default class Items extends Component{
         };
 
         this.ItemsList=this.state.listI.map((item,index)=>
-            <Item id={item.id} name={item.name} image={item.image} price={item.price} key={index} />
+            this.props.addToCart(item,index)
         );
     }
 
-    btnSendtoParent=()=>{
-        this.props.sendData('7');
-    }
 
     render(){
         return(
