@@ -21,7 +21,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Item />
         <Items idata={Wears} />
       </header>
     </div>
