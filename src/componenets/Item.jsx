@@ -8,8 +8,7 @@ export default class Item extends Component {
             id: props.id,
             name: props.name,
             price: props.price,
-            image: props.image,
-            addToCart: props.addToCart
+            image: props.image
         };
     }
 
@@ -20,7 +19,7 @@ export default class Item extends Component {
                 <h5>{this.state.name}</h5>
                 <img src={this.state.image} alt="img" height='200px' width='150px' />
                 <p>{this.state.price}</p>
-                <btn onclick={this.state.addToCart}>add to Cart</btn>
+                <button onClick={() => this.props.addToCart()}>add to Cart</button>
             </div>
         );
     }

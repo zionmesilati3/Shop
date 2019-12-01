@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 
-export default class Items extends Component{
-    constructor(props){
+export default class Items extends Component {
+    constructor(props) {
         super(props);
-     
+
         console.log(this.props);
-        this.state={
-            listI:this.props.idata
+        this.state = {
+            listI: this.props.idata
         };
 
-        this.ItemsList=this.state.listI.map((item,index)=>
-            this.props.addToCart(item,index)
+        this.ItemsList = this.state.listI.map((item, index) =>
+            this.props.addToItems(item, index)
         );
     }
 
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 {this.ItemsList}
             </div>
         );
     }
-    
+
 }
