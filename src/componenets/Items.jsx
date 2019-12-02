@@ -12,12 +12,18 @@ export default class Items extends Component {
         this.ItemsList = this.state.listI.map((item, index) =>
             this.props.addToItems(item, index)
         );
+        /*this.setState((state,props)=>{
+            return{listI:props.idata};
+        });*/
     }
+
+    
 
 
     render() {
         return (
             <div>
+                <h1>Items List</h1>    
                 {this.ItemsList}
             </div>
         );
